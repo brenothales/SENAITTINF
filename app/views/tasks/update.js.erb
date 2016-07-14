@@ -1,0 +1,4 @@
+$("#myupdatetask_<%= @task.id %>").modal('hide');
+$("#task_<%= @post.id %>").fadeOut(500, function(){
+	$(this).remove();
+	$("#container_tasks").prepend('<%= j render @task %>');
